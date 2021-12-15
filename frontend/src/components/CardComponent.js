@@ -1,12 +1,7 @@
-import { Card, Button } from "react-bootstrap";
-import { useNavigate, Link } from "react-router-dom";
+import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Rating from "./Rating";
 const CardComponent = ({ product }) => {
-  const navigate = useNavigate();
-
-  const addToCartHandler = () => {
-    navigate(`/cart/${product._id}`);
-  };
   return (
     <>
       <Card style={{ width: "17rem", marginTop: "1rem", marginBottom: "1rem" }}>
@@ -34,9 +29,6 @@ const CardComponent = ({ product }) => {
           <Card.Text>
             <Rating value={product.rating} text={product.numReviews} />
           </Card.Text>
-          <Button type="button" variant="primary" onClick={addToCartHandler}>
-            Add to cart
-          </Button>
         </Card.Body>
       </Card>
     </>
