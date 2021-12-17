@@ -1,20 +1,25 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, Button } from "react-bootstrap";
 const Header = () => {
+  const hamBurgerHandle = {};
   return (
     <header>
       <Navbar bg="primary" variant="dark">
-        <spam className="ham">
-          <i class="fas fa-bars"></i>
-        </spam>
+        <Button onClick={hamBurgerHandle}>
+          <spam className="ham">
+            <i class="fas fa-bars"></i>
+          </spam>
+        </Button>
+
         <Container>
-          <Navbar.Brand href="/">Online</Navbar.Brand>
+          <Navbar.Brand href="/" style={{ fontSize: "1.1rem" }}>
+            E-COMMERCE
+          </Navbar.Brand>
           <Nav className="ms-auto">
             <Nav.Link href="/cart">
-              <i class="fas fa-shopping-cart"></i>
-              Cart
+              <i class="fas fa-shopping-cart"></i>Cart
             </Nav.Link>
             <Nav.Link href="/login">
-              <i class="fas fa-user"></i> Login
+              <i class="fas fa-user"></i>Login
             </Nav.Link>
           </Nav>
         </Container>
